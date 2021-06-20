@@ -1,47 +1,5 @@
-/* # Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- White: hsl(0, 0%, 100%)
-- Black: hsl(0, 0%, 0%)
-- Dark Gray: hsl(0, 0%, 55%)
-- Very Dark Gray: hsl(0, 0%, 41%)
-
-### Neutral
-
-## Typography
-
-### Body Copy
-
-- Font size: 15px
-
-### Fonts
-
-- Family: [Alata](https://fonts.google.com/specimen/Alata)
-- Weight: 400
-
-- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
-- Weight: 300
-
-## Icons
-
-We provide the required social icons. But, if you prefer, you can use a font icon library. Some suggestions can be found below:
-
-- [Font Awesome](https://fontawesome.com)
-- [IcoMoon](https://icomoon.io)
-- [Ionicons](https://ionicons.com) */
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
-/* font-family: 'Alata', sans-serif;
-font-family: 'Josefin Sans', sans-serif; */
+
 
 * {
   margin: 0;
@@ -118,15 +76,23 @@ animation: closeMenuAppear 0.8s ease;
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
-  padding: 1rem 0;
   cursor: pointer;
-  border-radius: 3rem;
   padding-left: 1rem;
-  transition: 0.5s ease-out;
 }
-.navbar-item-mobile:active {
-    background-color: rgba(255,255,255,0.5);
+.navbar-item-mobile::after {
+    margin-top: 10px;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: 0.5s ease-out;
 
+}
+.navbar-item-mobile:hover::after {
+    transform: scaleX(0.1);
+    width: 150%;
 }
 .navbar {
   display: flex;
